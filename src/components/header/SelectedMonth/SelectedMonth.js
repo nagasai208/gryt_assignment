@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { MainDiv, DropDown } from './styledComponents';
 
-function SelectedMonth() {
+function DropDownedMonth() {
     let [month,setMonth] = useState('jan')
     return (
-        <div>
+        <MainDiv>
             <p>{month}</p>
-            <select class="ui dropdown" onChange={(e) => setMonth(e.target.value)}>
+            <DropDown class="ui dropdown" onChange={(e) => setMonth(e.target.value)}>
                 <option value="Jan">Jan</option>
                 <option value="Feb">Feb</option>
                 <option value="March">March</option>
@@ -18,10 +19,10 @@ function SelectedMonth() {
                 <option value="Oct">Oct</option>
                 <option value="Nov">Nov</option>
                 <option value="Dec">Dec</option>
-            </select>
+            </DropDown>
            
-        </div>
+        </MainDiv>
     )
 }
 
-export default SelectedMonth;
+export default DropDownedMonth;
